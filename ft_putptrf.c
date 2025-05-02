@@ -11,7 +11,7 @@ int	ft_putptrf(unsigned long nb, char *base, char first)
 	if (first)
 		count += write(1, "0x", 2);
 	first = 0;
-	if (count < 14)
-		ft_putptrf(nb/16, base, first);
+	if (nb > 15)
+		count += ft_putptrf(nb/16, base, first);
 	return (count + ft_putcharf(base[nb % 16]));
 }

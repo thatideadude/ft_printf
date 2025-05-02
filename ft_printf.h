@@ -11,5 +11,8 @@ int	ft_putnbrf(int nb);
 int	ft_putnbruf(unsigned int nb);
 int ft_puthexf(unsigned int nb, char *base);
 int ft_putptrf(unsigned long nb, char *base, char first);
+int ft_strlen(char *str);
+int	ft_putstrn(char *str, int min, int max, int align);
+int ft_putcpad(char c, int align, int max);
 
 #endif

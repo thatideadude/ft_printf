@@ -15,8 +15,8 @@ int	ft_getfunc(char c, va_list args)
 	if ( c == 'X')
 		return (ft_puthexf(va_arg(args, unsigned long), "0123456789ABCDEF"));
 	if ( c == 'p')
-	{
 		return (ft_putptrf(va_arg(args, unsigned long), "0123456789abcdef", 1));
-	}
+	if ( c == '%')
+		return (ft_putcharf('%'));
 	return (0);
 }
