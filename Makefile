@@ -8,6 +8,8 @@ SRCS+=ft_getfunc.c
 SRCS+=ft_putnbruf.c
 SRCS+=ft_puthexf.c
 SRCS+=ft_putptrf.c
+SRCS+=ft_specifier.c
+SRCS+=ft_putcpad.c
 
 BONUS_SRCS=./bonus/ft_putstrn_bonus.c
 BONUS_SRCS+=./bonus/ft_putcpad_bonus.c

@@ -15,6 +15,8 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			count += ft_findspecifier((char *)&str[++i], args);
+			while (is_validf(str[i]))
+				++i;
 			++i;
 		}
 		else

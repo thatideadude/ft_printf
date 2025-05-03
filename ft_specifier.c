@@ -1,4 +1,4 @@
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int is_validf(char c)
 {
@@ -29,7 +29,7 @@ int ft_findspecifier(char *str, va_list args)
 		return (3);
 	if (str[i] == 'p')
 		return (7);
-	if (str[i] == 'd' || str[i] == 'd')
+	if (str[i] == 'd' || str[i] == 'i')
 		return (15);
 	if (str[i] == 'u')
 		return (31);
@@ -41,3 +41,4 @@ int ft_findspecifier(char *str, va_list args)
 		return (255);
 	return (i * -1);
 }
+
