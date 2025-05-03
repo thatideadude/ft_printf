@@ -1,6 +1,27 @@
 #include "../ft_printf.h"
 
-int	ft_putcpad(char c, int align, int max)
+int	ft_parcec(char *str, int c)
+{
+	int	i;
+	int align;
+	int max;
+
+	i = 0;
+	align = 0;
+	if (str[i] == 'c')
+		return (ft_putcharf(c));
+	if (str[i] == '-')
+	{
+		align = 1;
+		++i;
+	}
+	max = 0;
+	while (str[i] > '0' && str[i] < '9')
+		max += str[i++] - '0' * 10;
+	return (ft_putcpad(c, align, max));
+}
+
+int	ft_putcpad(int c, int align, int max)
 {
 	int	i;
 

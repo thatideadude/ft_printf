@@ -6,17 +6,17 @@ int	ft_getfunc(char c, va_list args)
 		return (ft_putcharf(va_arg(args, int)));
 	if (c == 's')
 		return (ft_putstrf(va_arg(args, char *)));
-	if ( c == 'd' || c == 'i')
+	if (c == 'd' || c == 'i')
 		return (ft_putnbrf(va_arg(args, int)));
-	if ( c == 'u')
+	if (c == 'u')
 		return (ft_putnbruf(va_arg(args, unsigned int)));
-	if ( c == 'x')
+	if (c == 'x')
 		return (ft_puthexf(va_arg(args, unsigned long), "0123456789abcdef"));
-	if ( c == 'X')
+	if (c == 'X')
 		return (ft_puthexf(va_arg(args, unsigned long), "0123456789ABCDEF"));
-	if ( c == 'p')
+	if (c == 'p')
 		return (ft_putptrf(va_arg(args, unsigned long), "0123456789abcdef", 1));
-	if ( c == '%')
+	if (c == '%')
 		return (ft_putcharf('%'));
 	return (0);
 }

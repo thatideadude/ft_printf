@@ -11,6 +11,7 @@ SRCS+=ft_putptrf.c
 
 BONUS_SRCS=./bonus/ft_putstrn_bonus.c
 BONUS_SRCS+=./bonus/ft_putcpad_bonus.c
+BONUS_SRCS+=./bonus/ft_findspecifier_bonus.c
 
 OBJS=$(SRCS:.c=.o)
 BONUS_OBJS=$(BONUS_SRCS:.c=.o)
