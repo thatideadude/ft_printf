@@ -1,11 +1,12 @@
 #include "../ft_printf.h"
-
-int	ft_parcec(char *str, int c)
+#include <stdio.h>
+int	ft_parsec(char *str, int c)
 {
 	int	i;
 	int align;
 	int max;
 
+	printf("--\n%s--\n", str);
 	i = 0;
 	align = 0;
 	if (str[i] == 'c')
@@ -16,8 +17,9 @@ int	ft_parcec(char *str, int c)
 		++i;
 	}
 	max = 0;
-	while (str[i] > '0' && str[i] < '9')
-		max += str[i++] - '0' * 10;
+	while (str[i] >= '0' && str[i] <= '9')
+		max += (str[i++] - '0') * 10;
+	printf("max :%d || align: %d || c: %c  ---", max, align, c);
 	return (ft_putcpad(c, align, max));
 }
 

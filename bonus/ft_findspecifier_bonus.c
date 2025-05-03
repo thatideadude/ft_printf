@@ -21,7 +21,7 @@ int ft_findspecifier(char *str, va_list args)
 	int	i;
 
 	i = 0;
-	while (is_valid(str[i]))
+	while (is_validf(str[i]))
 		++i;
 	if (str[i] == 'c')
 		return (ft_parsec(str, va_arg(args, int)));

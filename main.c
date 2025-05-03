@@ -13,6 +13,7 @@ int main(void)
 //	ft_putstrn("there", 3, 3, 0);
 //	write(1, "\n", 1);
 	printf("%10c\n", 'a');
-	ft_putcpad('b', 0, 10);
-	write(1, "\n", 1);	
+	ft_printf("%10c\n", 'a');
+	//ft_putcpad('b', 0, 10);
+//	write(1, "\n", 1);	
 }
