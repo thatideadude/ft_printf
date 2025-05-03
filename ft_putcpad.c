@@ -10,17 +10,11 @@ int	ft_parsec(char *str, int c)
 	align = 0;
 	if (str[i] == 'c')
 		return (ft_putcharf(c));
-	if (str[i] == '-')
-	{
-		align = 1;
-		++i;
-	}
+	align = (str[i] == '-');
+	i += align;
 	max = 0;
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		max = max * 10 + (str[i] - '0');
-		++i;
-	}
+		max = max * 10 + (str[i++] - '0');
 	if (max == 0)
 		max = 1;
 	return (ft_putcpad(c, align, max));

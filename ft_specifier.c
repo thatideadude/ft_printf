@@ -26,7 +26,7 @@ int ft_findspecifier(char *str, va_list args)
 	if (str[i] == 'c')
 		return (ft_parsec(str, va_arg(args, int)));
 	if (str[i] == 's')
-		return (3);
+		return (ft_parses(str, va_arg(args, char *)));
 	if (str[i] == 'p')
 		return (7);
 	if (str[i] == 'd' || str[i] == 'i')

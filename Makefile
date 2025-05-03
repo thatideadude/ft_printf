@@ -11,9 +11,7 @@ SRCS+=ft_putptrf.c
 SRCS+=ft_specifier.c
 SRCS+=ft_putcpad.c
 
-BONUS_SRCS=./bonus/ft_putstrn_bonus.c
-BONUS_SRCS+=./bonus/ft_putcpad_bonus.c
-BONUS_SRCS+=./bonus/ft_findspecifier_bonus.c
+BONUS_SRCS=
 
 OBJS=$(SRCS:.c=.o)
 BONUS_OBJS=$(BONUS_SRCS:.c=.o)
@@ -26,6 +24,7 @@ $(NAME): $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 .c.o:
 	cc $(CFLAGS) -c $< -o ${<:.c=.o}
 
